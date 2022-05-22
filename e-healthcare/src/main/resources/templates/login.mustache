@@ -1,0 +1,83 @@
+{{> header}}
+
+    <!-- content -->
+
+    <script type="text/javascript">
+        $(function() {
+
+            $('.btnNaver').click(function() {
+                var naver = window.open("https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=Wt75adUJ_7cT95RAHycc&redirect_uri=http://localhost:7070/auth/signin&state=428518104969190859911981883908505070392", "naver","width=570,height=420, scrollbars=yes, resizable=yes");
+            });
+
+
+            $('#loginBtn').click(function() {
+                if($('#userId').val() == "") {
+                    alert("아이디를 입력하세요.");
+                    $('#userId').focus(); // 입력 포커스 이동
+                    return false;
+                }
+
+                if($('#userPw').val() == "") {
+                    alert("비밀번호를 입력하세요.");
+                    $('#userPw').focus();
+                    return false;
+                }
+                var frm = $('#memberVo');
+                frm.submit(); // 제출
+            });
+
+        });
+
+    </script>
+
+    <main id="content" class="loginContent bodyBg">
+        <div class="contHeadingWrap hideEl">
+            <h2>로그인</h2>
+        </div>
+        <div class="logBoxWrap clearFix">
+
+            <div class="logBox">
+                <img src = "/images/nologo.png" width="120", height="120">
+
+                <!-- Logo -->
+                <fieldset>
+                    <img src = "/images/logo6.png" width="120", height="120">
+                </fieldset>
+                <p class="colorPoint02"><br>E-healthcar는 시공간 제약 없이 <br>사용자에게 맞춤형 진료 서비스를 제공합니다.<br></p>
+
+                <p class="colorPoint02"><br>  </p>
+
+                <div class="telBox">
+                    <p><span>대표전화</span></p>
+                    <p><b class="colorPoint">1234-5678</b></p>
+                    <!-- <p>예약센터 <b class="colorPoint">1588-5700</b></p>
+                    <p>대표전화 <b class="colorPoint">02-2072-2114</b></p> -->
+                </div>
+                </span>
+
+            </div>
+
+            <div class="logBox">
+                <h3 class="regularTxt b">로그인</h3>
+
+                <p class="colorPoint02">E-healthcar 홈페이지 회원 서비스는<br>로그인 후 이용하실 수 있습니다.</p>
+
+                <form id="user" action="/auth/signin" method="post">
+                    <input id="retUrl" name="retUrl" type="hidden" value=""/>
+                    <fieldset>
+                        <legend>아이디, 비밀번호 입력</legend>
+
+                        <label><input id="userId" name="userId" placeholder="아이디" class="inputText" type="text" value=""/></label>
+                        <label><input id="userPw" name="userPw" onkeydown="check();" placeholder="비밀번호" class="inputText" type="password" value=""/></label>
+                        <button type="button" id="loginBtn" class="btnType03 btnBig">로그인</button>
+                    </fieldset>
+                </form>
+                <a href="findId" role="button" class="txtBtn">아이디/비밀번호찾기</a><span class="b"><a href="signupStep1" onclick="gtag('event','PC 로그인화면 회원가입 버튼', { 'event_category' : '회원가입', 'event_label' : '회원가입_PC 로그인화면 회원가입 버튼', 'value': 1000});" role="button" class="txtBtn">회원가입</a></span>
+                <a href="#" class="btnNaver btnBig" role="button"><b class="b">네이버 아이디로 로그인</b></a>
+
+
+    </main>
+<!-- //content -->
+
+{{> footer}}
+

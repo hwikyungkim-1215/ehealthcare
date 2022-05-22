@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>E-healthcare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="Seoul National University Hospital, korea, child, kid, cancer, 서울대학교병원, 서울대병원, 어린이병원, 암병원" />
+    <link rel="shortcut icon" href="/images/logo6.png" type="image/x-icon"/>
+
+    <script type="text/javascript" src="/js/webfont.min.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/snuh-components-v1.0.0.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <a href="#content" class="skipToContent">본문으로 바로가기</a>
+    <!-- header -->
+    /*
+    <script type="text/javascript">
+
+        function outcomesFnc(e) {
+
+            var now = new Date();
+            var dday = new Date("2021", "11", "17","11","59","59");
+
+            if(now != dday) {
+                alert("콘텐츠 준비중입니다.");
+                e.preventDefault();
+                return false;
+            }else {
+                window.open('https://dept.snuh.org/dept/OC/index.do');
+            }
+
+        }
+    </script>
+    */
+    <header id="header" class="b">
+        <!-- innerWrap -->
+        <div class="innerWrap">
+            <h1><a href="/main" class="hideTxt">E-healthcare</a></h1>
+            <div class="topLeftWrap">
+                <a href="/main" class="hideTxt" id="outcomes" >Outcomes Book</a>
+            </div>
+
+            <!-- topMenuWrap -->
+            <div class="topMenuWrap">
+
+                <!-- topMenu -->
+                <ul class="topMenu">
+
+                    <li><a href="/auth/signin">로그인</a></li>
+                    <li><a href="/auth/signupStep1" onclick="gtag('event','PC 메인화면 상단 회원가입 버튼', { 'event_category' : '회원가입', 'event_label' : '회원가입_PC 메인화면 상단 회원가입 버튼', 'value': 1000});">회원가입</a></li>
+
+                </ul>
+                <!-- //topMenu -->
+            </div>
+            <!-- //topMenuWrap -->
+
+            <!-- gnb -->
+            <nav id="gnb">
+                <button class="totMenuBtn hideTxt" type="button">전체 메뉴 열기</button>
+                <h2 class="hideEl">주 메뉴</h2>
+                <ul class="gnbList clearFix">
+                    <li>
+                        <a href="/api/intro/healthcare" onclick="return false;">헬스케어 소개</a>
+
+                    </li>
+                    <li>
+                        <a href="/api/search">분야선택</a>
+
+                    </li>
+                    <li>
+                        <a href="/api/search/doctor" onclick="return false;">의사검색</a>
+
+                    </li>
+                    <li>
+                        <a href="/api/search/disease" onclick="return false;">내 질병 찾기</a>
+
+                    </li>
+                    <li>
+                        <a href="/auth/mypage" onclick="return false;">마이페이지</a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+            <!-- //gnb -->
+
+
+        </div>
+        <!-- //innerWrap -->
+    </header>
+    <!-- //header -->
+
+    <!-- contTopBar -->
+
+
+    <div class="contTopBar">
+        <!-- innerWrap -->
+        <div class="innerWrap clearFix">
+            <!-- bcQuickMenu -->
+            <ul class="bcQuickMenu">
+                <li class="a"><a href="/api/reservation">진료예약</a></li>
+                <li><a href="/api/reservation/confirm">예약조회</a></li>
+            </ul>
+            <!-- //bcQuickMenu -->
+        </div>
+        <!-- //innerWrap -->
+    </div>
+    <script type="text/javascript">
+
+        var locationInfo = {
+            cate0: $(".viewTitle h3").text(),
+            cate1: $(".breadcrumb em:eq(2)").text(),
+            cate2: $(".breadcrumb em:eq(1)").text(),
+            cate3: $(".breadcrumb em:eq(0)").text()
+        }
+    </script>
+
+
+    <!-- //contTopBar -->
+
+    <!-- contTopBar -->
+
+
+    <div class="contTopBar">
+        <!-- innerWrap -->
+        <div class="innerWrap clearFix">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <strong class="hideEl">현재 위치: </strong>
+                <a href="/" class="bcHomeBtn hideTxt b">HOME</a>
+                <span class="hideEl">&gt;</span>
+
+            </div>
+            <!-- //breadcrumb -->
+            <!-- bcQuickMenu -->
+            <ul class="bcQuickMenu">
+                <li class="a"><a href="/reservation/reservation.do">진료예약</a></li>
+                <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+            </ul>
+            <!-- //bcQuickMenu -->
+        </div>
+        <!-- //innerWrap -->
+    </div>
+    <script type="text/javascript">
+
+        var locationInfo = {
+            cate0: $(".viewTitle h3").text(),
+            cate1: $(".breadcrumb em:eq(2)").text(),
+            cate2: $(".breadcrumb em:eq(1)").text(),
+            cate3: $(".breadcrumb em:eq(0)").text()
+        }
+    </script>
+
+
+    <!-- //contTopBar -->

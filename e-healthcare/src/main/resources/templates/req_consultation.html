@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Edited by Ga-eun Kim
+
+	상담요청 목록 페이지
+-->
+<html>
+	<head>
+		<title>E-HealthCare 상담요청 목록</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+	</head>
+	<body class="req_consultation is-preload">
+		<div id="page-wrapper">
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<img src = "../static/images/logo.png" style="float: center; display: inline; margin: 1em; width:4em; height:4em;">
+
+							<h1><a href="main.mustache">E-HealthCare</a></h1>
+							<p>An online consultation and medical subscription</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="main.mustache">Home</a></li>
+								<li><a href="req_consultation.html">상담요청 목록</a></li>
+								<li><a href="patients.html">환자 관리</a></li>
+								<li><a href="main.mustache">Log Out</a></li>		<!-- 로그인 기능 구현 전이기 때문에 페이지를 바꾸는 것으로 대체함. -->
+							</ul>
+						</nav>
+				</section>
+
+			<!-- Main -->
+				<section id="highlights" class="wrapper style2">
+					<div class="title">상담요청 목록</div>
+					<div class="container">
+						<table>
+							<thead>
+								<tr>
+									<th>이름</th>
+									<th>수락 상태</th>
+									<th>증상 요약</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!------------------------------------------------------------------------------>
+								<!-- 아래의 환자 정보를 DB에서 불러오면 array 같은데에 저장해서 반복하면 됌 -->
+								<tr><!-- 첫번째 줄 -->
+									<td>홍길동</td>
+									<td>
+										<label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+										</label>
+									</td>
+									<td>두통, 고열</td>
+								</tr>
+								<tr><!-- 두번째 줄 -->
+									<td>김이박</td>
+									<td>
+										<label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+										</label>
+									</td>
+									<td>복통</td>
+								</tr>
+								<tr><!-- 세번째 줄 -->
+									<td>강하다</td>
+									<td>
+										<label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+										</label>
+									</td>
+									<td>기침</td>
+								</tr>
+								<tr><!-- 네번째 줄 -->
+									<td>한겨울</td>
+									<td>
+										<label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+										</label>
+									</td>
+									<td>어지럼증</td>
+								</tr>
+								<!------------------------------------------------------------------------------>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Contact</div>
+					<div class="container">
+						<div class="row">
+							<!-- Contact -->
+								<section class="feature-list small">
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-envelope">Email</h3>
+												<p>
+													<a href="#">swe_team4@cau</a>
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-phone">Phone</h3>
+												<p>
+													(000) 000-0000
+												</p>
+											</section>
+										</div>
+									</div>
+								</section>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>&copy; 2021 중앙대학교 소프트웨어공학 03분반 team4.</li><li>Design: <a href="http://html5up.net">HTML5 UP 참고</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
